@@ -1,8 +1,8 @@
-import { Router } from "express";
-import { captureTemperature } from "./services/captureTemperature"
+import  Router from "express";
+import captureTemperature from "./services/captureTemperatureServices"
 
-const router = Router();
+const router = new Router();
 
-const capturTempe = new captureTemperature();
+router.get("/", captureTemperature);
 
-router.get("/", capturTempe);
+export default router ;
