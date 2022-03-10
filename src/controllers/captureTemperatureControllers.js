@@ -1,13 +1,14 @@
-import { response } from "express";
-import captureTemperature from "../services/captureTemperatureServices";
+// import { request, response } from "express";
+// import captureTemperature from "../services/captureTemperatureServices";
 
-async function captureTempControllers(){
-    try {
-        const captureTemperature = new captureTemperature();
-        const temp = await captureTemperature.captureTemperature();
-        return response.json(temp);
-    } catch (error) {
+// const captureTempControllers =  async (request, response) =>{
+//     try {
+//         cidade = request.body;
+//         const captureTemperature = new captureTemperature(cidade);
+//         const temp = await captureTemperature.captureTemperature(cidade);
+//         return response.json(temp);
+//     } catch (error) {
         
-    }
-}
-export default captureTempControllers();
+//     }
+// }
+// export default captureTempControllers();
