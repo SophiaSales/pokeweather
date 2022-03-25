@@ -20,7 +20,7 @@
   "homepage": "https://github.com/SophiaSales/pokeweather#readme",
   "dependencies": {
     "axios": "^0.25.0",
-    "dotenv": "^15.0.0",
+    "dotenv": "^15.0.1",
     "express": "^4.17.2",
     "nodemon": "^2.0.15"
   }

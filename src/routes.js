@@ -4,7 +4,8 @@ import captureTemperature from "./services/captureTemperatureServices";
 const router = new Router();
 
 router.all("/", async(req, res) => {
-    const data = await captureTemperature('porto')
+    // const cidade = req.query.cidade
+    const data = await captureTemperature("porto");
     res.send(data)
 });
 
