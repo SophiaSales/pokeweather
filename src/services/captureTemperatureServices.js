@@ -1,17 +1,17 @@
 import axios from "axios";
-
 const captureTemperature = async (cidade) => {
     try {
         const urlTemp = process.env.URL_CLIMA;
-        const paramsTemp = {
-            params:{ 
-                q: cidade,
-                appid: process.env.KEY
-            }
+        const appid =  process.env.KEY;
+        
+        const result = await axios.get(`${urlTemp}?q=${cidade}&appid=${appid}&units=metric`);
+        const dados = {
+            cidade: result.data.name,
+            temperatura: result.data.main.temp,
+            descricao: result.data.weather[0].description
         }
-        const result = await axios.get(urlTemp, paramsTemp);
-        console.log(result.data);
-        return (result.data)
+        console.log(dados);
+        return (dados);
     } catch (error) {
         console.log(error);
     }
