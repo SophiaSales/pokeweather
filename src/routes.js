@@ -1,12 +1,8 @@
 import  Router from "express";
-import captureTemperature from "./services/captureTemperatureServices";
+import captureTempControllers from "./controllers/captureTemperatureControllers";
 
 const router = new Router();
 
-router.all("/", async(req, res) => {
-    const cidade = req.query.cidade;
-    const data = await captureTemperature(cidade);
-    return res.send(data)
-});
+router.all("/", captureTempControllers);
 
 export default router ;
